@@ -4,9 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>canvas画版</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="canvas"></div>
+    <script>
+        canvas.onclick = (e) => {
+            let div = document.createElement("div");
+            div.style.width = "6px";
+            div.style.height = "6px";
+            div.style.position = "absolute";
+            div.style.left = e.clientX + "px";
+            div.style.top = e.clientY + "px";
+            div.style.backgroundColor = "#000000";
+            div.style.borderRadius = "50%";
+            canvas.appendChild(div);
+        }
+    </script>
 </body>
 </html>
